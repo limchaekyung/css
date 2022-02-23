@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font awesome file link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+    <!-- owl carousel css cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="post-container owl-carousel">
+        <div class="post">
+            <div class="image">
+                <img src="post1.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="date"><i class="fas fa-calendar alt">Jan 1, 2022</i></div>
+                <a href="#" class="title">post title goes here</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis blanditiis modi fugit, rem alias ab. Rem excepturi aspernatur sunt?</p>
+                <a href="#" class="link">read more</a>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="image">
+                <img src="post2.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="date"><i class="fas fa-calendar alt">Jan 3, 2022</i></div>
+                <a href="#" class="title">post title goes here</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis blanditiis modi fugit, rem alias ab. Rem excepturi aspernatur sunt?</p>
+                <a href="#" class="link">read more</a>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="image">
+                <img src="post3.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="date"><i class="fas fa-calendar alt">Jan 5, 2022</i></div>
+                <a href="#" class="title">post title goes here</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis blanditiis modi fugit, rem alias ab. Rem excepturi aspernatur sunt?</p>
+                <a href="#" class="link">read more</a>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="image">
+                <img src="post4.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="date"><i class="fas fa-calendar alt">Jan 7, 2022</i></div>
+                <a href="#" class="title">post title goes here</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis blanditiis modi fugit, rem alias ab. Rem excepturi aspernatur sunt?</p>
+                <a href="#" class="link">read more</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- owl carousel js cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.post-container').owlCarousel({
+                pagination: false,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    700: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 4
+                    },
+                }
+            })
+        })
+    </script>
+</body>
+</html>
