@@ -31,7 +31,8 @@ body{
     position: relative;
     grid-column: span 4;
     height: 100px;
-    width: 100%;
+    left: 10px;
+    width: calc(100% - 30px);
     border: none;
     outline: none;
     background: #a7af7a;
@@ -75,9 +76,36 @@ body{
     border-bottom: 1px solid #0004;
     border-top: 1px solid #0009;
 }
+.calculator span:active{
+    filter: brightness(1.5);
+}
 .calculator span i{
     position: relative;
     font-style: normal;
     font-size: 1.5rem;
     text-transform: uppercase;
+}
+.calculator .clear{
+    grid-column: span 2;
+    width: 180px;
+    background: #f00;
+}
+.calculator .clear::before{
+    background: linear-gradient(90deg, #d20000, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+.calculator .plus{
+    grid-row: span 2;
+    height: 180px;
+}
+.calculator .equal {
+    background: #2196f3;
+}
+.calculator .equal::before{
+    background: linear-gradient(90deg, #1479c9, #ffffff5c);
+    border-left: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    border-top: 1px solid #fff4;
 }
