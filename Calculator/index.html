@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="btn">
+        <strong>🌞</strong>
+        <strong>🌙</strong>
+    </div>
     <div class="container">
         <form name="calc" class="calculator">
             <input type="text" class="value" readonly name="txt">
@@ -68,5 +74,14 @@
             </span>
         </form>
     </div>
+
+    <script>
+        let body = document.querySelector('body');
+        let btn = document.querySelector('.btn');
+        btn.onclick = function () {
+            body.classList.toggle('light')
+        }
+    </script>
 </body>
+
 </html>
