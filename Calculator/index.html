@@ -18,6 +18,7 @@
         <form name="calc" class="calculator">
             <input type="text" class="value" readonly name="txt">
             <span class="num clear" onClick="calc.txt.value=''">
+                <!-- input에 value 값 삽입 -->
                 <i>C</i>
             </span>
             <span class="num" onClick="calc.txt.value+='/'">
@@ -70,6 +71,7 @@
             </span>
 
             <span class="num equal" onClick="document.calc.txt.value=eval(calc.txt.value)">
+                <!-- 문자열을 입력 받아 결과값을 반환 -->
                 <i>=</i>
             </span>
         </form>
@@ -81,6 +83,12 @@
         btn.onclick = function () {
             body.classList.toggle('light')
         }
+    /* 
+    element.classList.toggle: 클래스가 존재한다면 클래스 제거, 
+                              클래스가 존재하지 않는다면 클래스 추가
+    element.classList.add: 클래스 추가
+    element.classList.remove: 클래스 제거
+    */
     </script>
 </body>
 

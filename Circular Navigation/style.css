@@ -7,6 +7,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; 세트~~ */
     min-height: 100vh;
     background: #222327;
 }
@@ -48,6 +51,7 @@ body{
     opacity: 0;
     transition: 0.5s;
     z-index: 10;
+    /* 위치 지정 요소 우선순위(큰 값이 작은 값을 덮음) */
 }
 .menu.active li{
     visibility: visible;
@@ -75,6 +79,7 @@ body{
     pointer-events: none;
     transition: 0.5s;
     transform-origin: right;
+    /* 회전 중심을 오른쪽으로 변경 */
 }
 .indicator::before{
     content: '';

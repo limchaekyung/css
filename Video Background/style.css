@@ -23,8 +23,9 @@ nav{
     left: 0;
     padding: 20px 8%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    /* 아이템들 사이에 균일한 간격 배치 */
+    align-items: center;
 }
 nav .logo{
     width: 80px;

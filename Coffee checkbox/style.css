@@ -24,6 +24,7 @@ label{
 }
 label input{
     appearance: none;
+    /* 원래 쓰이는 속성을 없앰 */
 }
 label span{
     position: absolute;
@@ -33,6 +34,7 @@ label span{
     background: url(Coffee_01.png);
     background-size: auto 150px;
     background-repeat: no-repeat;
+    /* 배경 이미지 반복 여부 정하는 속성 */
     transition: 1.5s;
     transform: rotate(-180deg);
     transform-origin: 75px;
@@ -51,6 +53,7 @@ label text{
     color: #fff;
     font-size: 3em;
     filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff);
+    /* 선택한 영역을 블러 처리 */
     transition: 1.5s;
 }
 label input:checked ~ text{

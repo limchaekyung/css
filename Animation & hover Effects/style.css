@@ -23,6 +23,7 @@ body{
     width: 100%;
     height: 100%;
     transform: rotate(calc(36deg * var(--i)));
+    /* calc: 계산식 지정 */
 }
 .loader span::before{
     content: '';
@@ -44,10 +45,14 @@ body{
     30px -30px 20px cornflowerblue,
     -30px 30px 0 cornflowerblue,
     -30px 30px 20px cornflowerblue;
+    /* 왼쪽좌표, 위쪽좌표, 그림자세기, 컬러 순서 */
     animation: animate 5s linear infinite;
+    /* linear: 처음부터 끝까지 일정한 속도로 진행, infinite: 무한히 반복 */
     animation-delay: calc(-0.25s * var(--i));
     transform-origin: 20px;
+    /* transform과 함께 사용하는 속성, 회전 중심 지정 */
     transition: 2s;
+    /* 정해진 시간 동안 요소의 속성값을 부드럽게 변화 */
 }
 .loader:hover span::before{
     box-shadow: 0 0 20px cornflowerblue,
@@ -62,12 +67,13 @@ body{
     transform-origin: 250px;
 }
 @keyframes animate{
+    /* 애니메이션의 특정 지점을 설정하여 제어 */
     0%{
         transform: rotate(0deg);
-        filter: hue-rotate(0deg)
+        filter: hue-rotate(0deg);   /* 색조 회전 */
     }
     100%{
         transform: rotate(360deg);
-        filter: hue-rotate(360deg)
+        filter: hue-rotate(360deg);
     }
 }

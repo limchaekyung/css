@@ -1,48 +1,59 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    /* 너비와 높이에 패딩과 테두리가 포함 */
 }
 :root{
     --clr: #5ff436;
+    /* :root 내부에서 전역 범위의 변수 생성, var() 함수를 사용하여 변수 삽입 */
 }
 body{
     display: flex;
+    /* 레이아웃 배치 전용 기능 */
+    /* 부모 요소: flex container, 자식 요소: flex item */
     justify-content: center;
+    /* 컨테이너 중간에 플렉스 항목을 정렬 */
     align-items: center;
+    /* Items를 가운데 정렬 */
     min-height: 100vh;
+    /* 현재 실행중인 스크린 크기에 맞춰 상대적 크기를 반환 */
     background: #222;
 }
 .thunderbolt{
     display: flex;
-    gap: 60px;
+    gap: 60px;  /* 여백 */
 }
-.thunderbolt .shape1{
+.thunderbolt .thunder1{
     position: relative;
+    /* absolute를 쓸 때 영역을 잡아주는 역할 */
+    /* relative 부모, absolute 자식이라고 가정 - 
+        부모인 relative가 absolute를 돌아다닐 수 있는 영역을 제한 */
     width: 0;
     height: 0;
     border-bottom: 60px solid var(--clr);
     border-left: 30px solid transparent;
     transform: skewX(-25deg) translate(-50%, -50%);
+    /* skewX: 가로로 기울임, translate: 위치 이동 */
 }
-.thunderbolt .shape1::before{
-    content: '';
-    position: absolute;
+.thunderbolt .thunder1::before{
+    content: '';    /* 내용 삽입 */
+    position: absolute; /* left, top, right, bottom 값으로 위치 조절 */
     bottom: -110px;
     right: -20px;
     width: 0;
     height: 0;
-    border-top: 60px solid var(--clr);
+    border-top: 60px solid var(--clr);  /* 위쪽 테두리 */
     border-right: 30px solid transparent;
 }
-.thunderbolt .shape2{
+.thunderbolt .thunder2{
     position: relative;
     width: 25px;
     height: 50px;
     background: var(--clr);
     transform: skewX(-30deg);
 }
-.thunderbolt .shape2::before{
+.thunderbolt .thunder2::before{
     content: '';
     position: absolute;
     top: -50px;
@@ -50,7 +61,7 @@ body{
     border-bottom: 60px solid var(--clr);
     border-left: 30px solid transparent;
 }
-.thunderbolt .shape2::after{
+.thunderbolt .thunder2::after{
     content: '';
     position: absolute;
     bottom: -50px;
@@ -58,14 +69,14 @@ body{
     border-top: 60px solid var(--clr);
     border-right: 30px solid transparent;
 }
-.thunderbolt .shape3{
+.thunderbolt .thunder3{
     position: relative;
     width: 25px;
     height: 50px;
     background: var(--clr);
     transform: skewX(-30deg);
 }
-.thunderbolt .shape3::before{
+.thunderbolt .thunder3::before{
     content: '';
     position: absolute;
     top: -50px;
@@ -73,7 +84,7 @@ body{
     border-bottom: 60px solid var(--clr);
     border-left: 30px solid var(--clr);
 }
-.thunderbolt .shape3::after{
+.thunderbolt .thunder3::after{
     content: '';
     position: absolute;
     bottom: -50px;
@@ -81,14 +92,14 @@ body{
     border-top: 60px solid var(--clr);
     border-right: 30px solid transparent;
 }
-.thunderbolt .shape4{
+.thunderbolt .thunder4{
     position: relative;
     width: 25px;
     height: 60px;
     background: var(--clr);
     transform: skewX(-25deg) translate(-50%, -50%);
 }
-.thunderbolt .shape4::before{
+.thunderbolt .thunder4::before{
     content: '';
     position: absolute;
     bottom: -50px;

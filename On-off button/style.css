@@ -15,7 +15,7 @@
 }
 .container p{
     font-size: 32px;
-    letter-spacing: 4px;
+    letter-spacing: 4px;    /* 텍스트의 문자 사이 간격 */
     color: #777;
     margin: -250px 0 100px;
 }
@@ -26,6 +26,7 @@
 .container input::before{
     content: '\f011';
     font-family: "FontAwesome";
+    /* fontawesome에서의 아이콘 추가 */
     font-size: 52px;
     color: #777;
     height: 160px;

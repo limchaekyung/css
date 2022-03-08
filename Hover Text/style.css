@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapics.com/css?family=Poppins:700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +16,7 @@ body{
 ul{
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 요소들 나열 방향 지정, 세로로 정렬 */
     gap: 30px;
 }
 ul li{
@@ -31,9 +32,11 @@ ul li a{
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    /* 텍스트 외곽선 처리 */
 }
 ul li a::before{
     content: attr(data-text);
+    /* attr: 속성값을 가져오거나 속성 추가 */
     position: absolute;
     color: var(--clr);
     width: 0;

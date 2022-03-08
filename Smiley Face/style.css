@@ -8,6 +8,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    /* 아이템들의 가로 크기 합이 콘테이너의 가로 크기를 넘어갈 때 
+       아이템을 다음 줄로 넘김 */
     gap: 4px;
     min-height: 100vh;
     background: #222;
