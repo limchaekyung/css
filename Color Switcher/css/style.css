@@ -22,11 +22,29 @@
 }
 body{
     background: var(--light-bg);
+    overflow: hidden;
+}
+body.active{
+    --black: #fff;
+    --bg: #262626;
+    --light-bg: #333;
+    --light-color: #eee;
+    --border: 1px solid rgba(255, 255, 255, .1);
+    --box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+#theme-open{
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    font-size: 40px;
+    color: var(--black);
+    cursor: pointer;
+    z-index: 10;
 }
 .themes-container{
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     background: var(--bg);
     border-left: var(--border);
     height: 100vh;
@@ -34,6 +52,9 @@ body{
     z-index: 1000;
     text-align: right;
     padding: 20px;
+}
+.themes-container.active{
+    right: 0;
 }
 .themes-container #theme-close{
     font-size: 40px;
@@ -77,6 +98,9 @@ body{
     background: #fff;
     transition: .2s linear;
 }
+.themes-container .theme-toggler.active .toggler::before{
+    left: 65px;
+}
 .themes-container .theme-colors{
     display: flex;
     flex-wrap: wrap;
@@ -91,4 +115,49 @@ body{
 }
 .themes-container .theme-colors .color:hover{
     opacity: .5;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+    margin: 10px;
+    min-height: 100vh;
+}
+.container .content{
+    background: var(--bg);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    text-align: center;
+    width: 400px;
+}
+.container .content img{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.container .content h3{
+    color: var(--black);
+    font-size: 25px;
+}
+.container .content p{
+    color: var(--light-color);
+    font-size: 15px;
+    line-height: 2;
+    padding: 10px 0;
+}
+.container .content .btn{
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: #fff;
+    background: var(--main-color);
+    font-size: 17px;
+}
+.container .content .btn:hover{
+    opacity: .8;
+    letter-spacing: 1px;
 }
