@@ -13,9 +13,19 @@
             <div class="imgBx">
                 <img src="user.jpg" alt="">
             </div>
+            <p class="username">Alina Smith</p>
         </div>
         <div class="menuToggle"></div>
+        <ul class="menu">
+            <li><a href="#"><ion-icon name="person-outline"></ion-icon>My Profile</a></li>
+            <li><a href="#"><ion-icon name="chatbubble-outline"></ion-icon>Message</a></li>
+            <li><a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a></li>
+            <li><a href="#"><ion-icon name="settings-outline"></ion-icon>Settings</a></li>
+            <li><a href="#"><ion-icon name="help-outline"></ion-icon>Help & Support</a></li>
+            <li><a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
+        </ul>
     </div>
+
     <script>
         let menuToggle = document.querySelector('.menuToggle');
         let navigation = document.querySelector('.navigation')
@@ -23,5 +33,8 @@
             navigation.classList.toggle('active')
         }
     </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
