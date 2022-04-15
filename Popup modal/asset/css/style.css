@@ -80,6 +80,9 @@ img{
   z-index: var(--z-modal);
   visibility: hidden;
   opacity: 0;
+
+  /* Effect 3 */
+  perspective: 1000px;
 }
 .modal__content{
   position: relative;
@@ -88,8 +91,16 @@ img{
   padding: 3rem 2rem 2rem;
   border-radius: 1rem 1rem 0 0;
   transition: all .3s;
+
   /* Effect 1 */
-  transform: translateY(10%);
+  /* transform: translateY(10%); */
+
+  /* Effect 2 */
+  /* transform: scale(.5) translateY(10%); */
+
+  /* Effect 3 */
+  transform: rotateX(65deg) scale(.75) translateY(10%);
+  transform-origin: 50% 100%;
 }
 .modal__img{
   width: 150px;
@@ -130,5 +141,23 @@ img{
   opacity: 1;
 }
 .show-modal .modal__content{
-  transform: translateY(0);
+   /* Effect 1 */
+  /* transform: translateY(0); */
+
+  /* Effect 2 */
+  /* transform: scale(1) translateY(0); */
+
+  /* Effect 3 */
+  transform: rotateX(0) scale(1) translateY(0);
+}
+
+@media screen and (min-width: 576px){
+  .modal__content{
+    margin: auto;
+    width: 380px;
+    border-radius: 1.25rem;
+  }
+  .modal__img{
+    width: 170px;
+  }
 }
