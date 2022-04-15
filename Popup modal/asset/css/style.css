@@ -13,7 +13,7 @@
   --big-font-size: 1.5rem;
   --normal-font-size: .938rem;
 
-  --z-index: 1000;
+  --z-modal: 1000;
 }
 
 @media screen and (min-width: 968px) {
@@ -77,5 +77,58 @@ img{
   align-items: flex-end;
   overflow: hidden;
   transition: all .3s;
-  z-index: var(--z-index);
+  z-index: var(--z-modal);
+  visibility: hidden;
+  opacity: 0;
+}
+.modal__content{
+  position: relative;
+  background-color: var(--container-color);
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  border-radius: 1rem 1rem 0 0;
+  transition: all .3s;
+  /* Effect 1 */
+  transform: translateY(10%);
+}
+.modal__img{
+  width: 150px;
+  margin-bottom: .75rem;
+}
+.modal__close{
+  display: inline-flex;
+  background-color: var(--first-color);
+  border-radius: .25rem;
+  color: #fff;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+.modal__title{
+  font-size: var(--big-font-size);
+  color: var(--title-color);
+  font-weight: 500;
+}
+.modal__description{
+  margin-bottom: 1.5rem;
+}
+.modal__button-width{
+  width: 90%;
+}
+.modal__button-link{
+  display: block;
+  margin: 1rem auto 0;
+  background-color: transparent;
+  color: var(--first-color);
+  font-weight: 500;
+}
+
+.show-modal{
+  visibility: visible;
+  opacity: 1;
+}
+.show-modal .modal__content{
+  transform: translateY(0);
 }
