@@ -12,15 +12,17 @@
 <div class="hero">
     <div class="music">
         <p>Artist: NEFFEX</p>
-        <p>Good Day (Wake Up)</p>
+        <h1>Good Day (Wake Up)</h1>
         <div class="track">
-            <img src="media/play.png">
+            <img src="media/play.png" id="playBtn">
             <div id="waveform"></div>
         </div>
     </div>
 </div>  
 
 <script>
+    var playBtn = document.getElementById("playBtn")
+
     var wavesurfer = WaveSurfer.create({
         container: '#waveform',
         waveColor: '#ddd',
@@ -32,6 +34,19 @@
     });
     wavesurfer.load('media/Good-Day-Wake-Up-NEFFEX.mp3');
 
+    playBtn.onclick = function(){
+        wavesurfer.playPause()
+        if(playBtn.src.includes("play.png")){
+            playBtn.src = "media/pause.png"
+        }else{
+            playBtn.src = "media/play.png"
+        }
+    }
+
+    wavesurfer.on('finish', function(){
+        playBtn.src = "media/play.png"
+        wavesurfer.stop()
+    })
 </script>  
 </body>
 </html>
