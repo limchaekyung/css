@@ -73,4 +73,36 @@ img {
 }
 .gallery__data {
   bottom: 1.5rem;
+  left: 1.75rem;
+  z-index: 10;
+}
+.gallery__title,
+.gallery__subtitle {
+  color: var(--text-color);
+  font-weight: 500;
+}
+.gallery__title {
+  font-size: var(--h3-font-size);
+}
+.gallery__subtitle {
+  font-size: var(--smaller-font-size);
+}
+.gallery__overflow {
+  position: relative;
+}
+.gallery__thumbnail {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gallery__thumbnail-img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
 }
