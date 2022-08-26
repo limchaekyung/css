@@ -39,6 +39,8 @@ img {
 .gallery {
   height: 100vh;
   display: grid;
+  align-content: center;
+  justify-content: center;
 }
 .gallery__card {
   position: relative;
@@ -105,4 +107,14 @@ img {
   position: absolute;
   inset: 0;
   margin: auto;
+}
+.gallery-cards,
+.gallery-thumbs {
+  width: 260px;
+}
+.gallery-card:hover .gallery__img {
+  transform: scale(1.1);
+}
+.gallery .swiper-wrapper {
+  padding: 2.5rem 0;
 }
