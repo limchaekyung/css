@@ -54,3 +54,22 @@ body {
   align-items: center;
   gap: 80px;
 }
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+.search-input-icon {
+  position: absolute;
+  height: 48px;
+  padding: 16px;
+  pointer-events: none;
+}
+.search-input {
+  padding: 16px;
+  border-radius: 26px;
+  background-color: white;
+  font-weight: 500;
+  font-size: inherit;
+  padding-left: calc(10px + 16px + 16px);
+  border: none;
+}
