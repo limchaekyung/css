@@ -53,10 +53,12 @@ body {
   display: flex;
   align-items: center;
   gap: 80px;
+  margin-bottom: 56px;
 }
 .search-bar {
   display: flex;
   align-items: center;
+  margin-bottom: 32px;
 }
 .search-input-icon {
   position: absolute;
@@ -72,4 +74,33 @@ body {
   font-size: inherit;
   padding-left: calc(10px + 16px + 16px);
   border: none;
+  width: 100%;
+}
+.review-section {
+}
+.review-title {
+  margin-bottom: 16px;
+}
+.review-row {
+  margin-top: 18px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.revire-number {
+  font-weight: bold;
+}
+.review-bar {
+  flex-grow: 1;
+  background-color: #eee;
+  border-color: #c9c9c9;
+  height: 10px;
+  border-radius: 100px;
+}
+.review-bar:after {
+  border: 1px solid #efb153;
+  border-color: #ffd66c;
+}
+.review-row:last-child {
+  margin-bottom: 0;
 }
