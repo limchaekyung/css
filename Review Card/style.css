@@ -77,6 +77,7 @@ body {
   width: 100%;
 }
 .review-section {
+  margin-bottom: 56px;
 }
 .review-title {
   margin-bottom: 16px;
@@ -84,13 +85,19 @@ body {
 .review-row {
   margin-top: 18px;
   display: flex;
-  gap: 8px;
   align-items: center;
+  gap: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.revire-number {
+.review-number {
   font-weight: bold;
+  text-align: end;
+  justify-self: flex-end;
 }
 .review-bar {
+  --border-width: 1px;
+  position: relative;
   flex-grow: 1;
   background-color: #eee;
   border-color: #c9c9c9;
@@ -100,7 +107,32 @@ body {
 .review-bar:after {
   border: 1px solid #efb153;
   border-color: #ffd66c;
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--border-width));
+  bottom: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  right: calc(-1 * var(--border-width));
+  width: calc(2 * var(--border-width) + var(--width));
+  border-radius: 100px;
+}
+.review-bar .empty::after {
+  content: none;
 }
 .review-row:last-child {
   margin-bottom: 0;
+}
+.review-btn {
+  background-color: hsl(238, 49%, 19%);
+  color: white;
+  border-radius: 100px;
+  padding: 16px 24px;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline-color: hsl(238, 49%, 79%);
+}
+.review-btn:hover {
+  background-color: hsl(238, 49%, 29%);
 }
