@@ -47,5 +47,41 @@ Object.entries(REVIEWS)
     reviewCount.classList.add("review-count");
     reviewRowsContainer.append(reviewCount);
   });
+let timeOffset;
+const DURATION = 500;
+function update(time) {
+  if (timeOffset != null) {
+    const timeElapsed = time - timeOffset;
+    const newAverage = getNewValue(
+      averageReviewElem.dataset.endValue,
+      timeElapsed
+    );
+    averageReviewElem.textContent = Math.round(newAverage * 10) / 10;
+    const countElems = document.querySelectorAll(
+      ".review-count[data-end-value]"
+    );
+    countElems.forEach((elem) => {
+      elem.textContent = Math.round(
+        getNewValue(elem.dataset.endValue, timeElapsed)
+      );
+    });
+    const reviewBars = document.querySelectorAll(".review-bar[data-end-value]");
+    reviewBars.forEach((elem) => {
+      elem.style.setProperty(
+        "--width",
+        `${getNewValue(elem.dataset.endValue, timeElapsed)}%`
+      );
+    });
+    if (timeElapsed >= DURATION) return;
+    requestAnimationFrame(update);
+  } else {
+    timeOffset = time;
+    requestAnimationFrame(update);
+  }
+}
+
+function getNewValue(endValue, timeElapsed) {
+  return Math.min((endValue * timeElapsed) / DURATION, endValue);
+}
 
 requestAnimationFrame(update);
