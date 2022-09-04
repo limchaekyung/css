@@ -89,10 +89,6 @@ body {
 .review-section {
   margin-bottom: 56px;
 }
-.review-title {
-  margin-bottom: 16px;
-}
-
 .review-number {
   font-weight: bold;
   text-align: end;
@@ -108,8 +104,6 @@ body {
   border-radius: 100px;
 }
 .review-bar:after {
-  border: 1px solid #efb153;
-  border-color: #ffd66c;
   content: "";
   position: absolute;
   top: calc(-1 * var(--border-width));
@@ -117,6 +111,8 @@ body {
   left: calc(-1 * var(--border-width));
   right: calc(-1 * var(--border-width));
   width: calc(2 * var(--border-width) + var(--width));
+  border: 1px solid #efb153;
+  background-color: #ffd66c;
   border-radius: 100px;
 }
 .review-bar .empty::after {

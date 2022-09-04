@@ -47,3 +47,5 @@ Object.entries(REVIEWS)
     reviewCount.classList.add("review-count");
     reviewRowsContainer.append(reviewCount);
   });
+
+requestAnimationFrame(update);
