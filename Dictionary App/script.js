@@ -1,5 +1,6 @@
 const wrapper = document.querySelector(".wrapper");
 searchInput = wrapper.querySelector("input");
+synonyms = wrapper.querySelector(".synonyms .list");
 infoText = wrapper.querySelector(".info-text");
 
 function data(result, word) {
@@ -7,6 +8,21 @@ function data(result, word) {
     infoText.innerHTML = `Can't find the meaning of <span>"${word}"</span>. Please, try to search for another word.`;
   } else {
     console.log(result);
+    wrapper.classList.add("active");
+
+    let definiteions = result[0].meaning[0].definiteions[0];
+    phonetics = `${result[0].meaning[0].partOfSpeech} / ${result[0].phonetics[0].text}/`;
+
+    document.querySelector(".word p").innerText = result[0].word;
+    document.querySelector(".word span").innerText = phonetics;
+    document.querySelector(".meaning span").innerText =
+      definiteions.definiteion;
+    document.querySelector(".example span").innerText = definiteions.example;
+
+    for (let i = 0; i < 5; i++) {
+      let tag = `<span>${definiteions.synonyms[i]},</span>`;
+      synonyms.insertAdjacentHTML("beforeend", tag);
+    }
   }
 }
 function fetchApi(word) {
