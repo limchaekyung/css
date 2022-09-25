@@ -14,7 +14,7 @@ body {
   background: #e3f2fd;
 }
 .container {
-  width: 750px;
+  width: 850px;
   background: #fff;
   border-radius: 10px;
   padding: 30px 35px 35px;
@@ -27,7 +27,16 @@ body {
 .container .wrapper {
   display: flex;
   margin: 20px 0;
-  min-height: 355px;
+  min-height: 335px;
 }
 .wrapper .editor-panel {
+  width: 280px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.editor-panel .title {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 12px;
 }
